@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['submit'])) 
+if (isset($_POST['singup'])) 
  {
     include_once 'dbh.inc.php' ;
     $user_frist = mysqli_real_escape_string($conn, $_POST['user_frist']);
@@ -43,6 +43,7 @@ if (isset($_POST['submit']))
                          $sql ="INSERT INTO users (user_frist, user_last, user_email, user_uid, user_password) 
                                            VALUES ('$user_frist', '$user_last', '$user_email', '$user_uid', '$hashedPwd') " ;
                                            $result = mysqli_query($conn, $sql);
+                                          
                                           header("location: ../signup.php?signup=success");
                         exit(); 
                      }
@@ -52,7 +53,8 @@ if (isset($_POST['submit']))
 
    
  }
-else {
+    else {
+      
     header("location: ../signup.php");
-    exit();
+    exit(); 
   }

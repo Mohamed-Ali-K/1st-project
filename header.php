@@ -29,7 +29,9 @@ session_start();
                         echo '
                        
                         <form action="includes/login.inc.php" method="POST">
+                         
                             <input type="text" name="user_uid" placeholder="Username/e-mail">
+                       
                             <input type="password" name="user_password" placeholder="Password">
                             <button type="submit" name="submit">Login</button>
                         </form>
@@ -43,6 +45,13 @@ session_start();
         </div>
 
 
-    </nav>    
-
+    </nav>   
+   <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script>
+        window.jQuery || document.write('<script src="js/jquery-2.1.4.js"><\/script>');
+    </script>
+ <script src="js/script.js"></script>
     </header>
